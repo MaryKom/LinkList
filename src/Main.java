@@ -8,6 +8,20 @@ public class Main {
 
         theList.displayList();
 
+        Link f = theList.find(44);
+        if (f != null)
+            System.out.println("Found link with key " + f.iData);
+        else
+            System.out.println("Can't find link");
+
+        Link d = theList.delete(55);
+        if (d != null)
+            System.out.println("Deleted link with key " + d.iData);
+        else
+            System.out.println("Can't delete link");
+
+        theList.displayList();
+
         while (!theList.isEmpty()) {
             Link aLink = theList.deleteFirst();
             System.out.print("Deleted ");
